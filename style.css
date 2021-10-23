@@ -1,4 +1,4 @@
-/* exemplo de código CSS aqui */
+
 * {
   margin: 0;
 }
@@ -19,10 +19,10 @@ body {
 
 main {
   background: url(images/background.svg) no-repeat center/cover;
-  /*no-repeat: a imagem não repete, center: centraliza a img, cover: expande a imagem*/
-  width: 100vw; /*vw: o tamanho atual do viewport dividido em 100 fragmentos, aqui ao 100% */
+  
+  width: 100vw; 
   min-height: 812px;
-  height: 100vw;
+  height: 100vh;
 }
 
 .container {
@@ -34,25 +34,25 @@ main {
 }
 
 .avatar {
-  width: 10rem; /* queria um w de 160px, rem é relativo à tamanho da fonte */
-  margin: 11.5rem auto 0; /* que neste caso é 16*/
+  width: 10rem;
+  margin: 11.5rem auto 0; 
 
   position: relative;
 }
 
 .avatar span {
-  position: absolute; /* fica absoluto en relação à pagina, mas, como o .avatar*/
-  top: -15px; /* tem o position relative, fica absoluto em relação a ele*/
-  z-index: 1; /* para que fique por cima de tudo*/
+  position: absolute; 
+  top: -15px; 
+  z-index: 1;
 }
 
 .avatar > img {
-  /* > afeta o img do primeiro nível*/
+ 
   width: 10rem;
   height: 11.5rem;
-  object-fit: cover; /*para que preencha todo o espaço do container*/
+  object-fit: cover;
 
-  /* Procurar o "clippy css" (bennettfeely.com/clippy) para fazer polígonos com css */
+  
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
@@ -82,14 +82,13 @@ p {
 ul {
   margin-top: 4rem;
 
-  list-style: none; /* tira as bolinhas das listas*/
+  list-style: none; 
   padding: 0;
 
-  display: flex; /* faz que um fique do lado do outro*/
-  gap: 0.5rem; /* espaço entre as caixas*/
+  display: flex; 
+  gap: 0.5rem;
 
-  /* display:flex, gap, justify... funcionan porque lá cima no body 
-  há um display: grid*/
+  
 
-  justify-content: center; /*para centralizar o flex usa-se isto*/
+  justify-content: center; 
 }
