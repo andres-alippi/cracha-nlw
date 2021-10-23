@@ -1,0 +1,95 @@
+/* exemplo de código CSS aqui */
+* {
+  margin: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  /*no-repeat: a imagem não repete, center: centraliza a img, cover: expande a imagem*/
+  width: 100vw; /*vw: o tamanho atual do viewport dividido em 100 fragmentos, aqui ao 100% */
+  min-height: 812px;
+  height: 100vw;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem; /* queria um w de 160px, rem é relativo à tamanho da fonte */
+  margin: 11.5rem auto 0; /* que neste caso é 16*/
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute; /* fica absoluto en relação à pagina, mas, como o .avatar*/
+  top: -15px; /* tem o position relative, fica absoluto em relação a ele*/
+  z-index: 1; /* para que fique por cima de tudo*/
+}
+
+.avatar > img {
+  /* > afeta o img do primeiro nível*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*para que preencha todo o espaço do container*/
+
+  /* Procurar o "clippy css" (bennettfeely.com/clippy) para fazer polígonos com css */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none; /* tira as bolinhas das listas*/
+  padding: 0;
+
+  display: flex; /* faz que um fique do lado do outro*/
+  gap: 0.5rem; /* espaço entre as caixas*/
+
+  /* display:flex, gap, justify... funcionan porque lá cima no body 
+  há um display: grid*/
+
+  justify-content: center; /*para centralizar o flex usa-se isto*/
+}
